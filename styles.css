@@ -1,0 +1,133 @@
+.container{
+    border-top: 1px solid rgb(198, 198, 198);
+    margin-top: 20px;
+}
+
+#aboutsection p{
+    max-width: 1020px;
+    width: 100%;
+    font-size: 40px;
+    letter-spacing: -0.01rem;
+    line-height: 52px;
+    overflow-wrap: break-word;
+}
+
+.animsection{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 250px;
+}
+
+.link.arrow{
+    padding: 0 45px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.link {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    height: 25px;
+    line-height: 22px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.link span{
+    background-color: white;
+}
+
+.link::before{
+    position: absolute;
+    content: '';
+    background: url("./media/icons_arrow_right-purple.svg") center center;
+    background-size: contain;
+    display: block;
+    width: 25px;
+    height: 20px;
+    top: 0px;
+    left: 0px;
+    margin-left: 0px;
+    z-index: -10;
+}
+
+.link:hover{
+    color: black;
+}
+
+.link:hover::before{
+    animation-name: example;
+    animation-duration: 0.8s;
+}
+
+@keyframes example{
+    0% {margin-left: 0;}
+    100% {margin-left: 85%;}
+}
+
+
+/* .animsection{
+    width: 200px;
+    height: 200px;
+} */
+
+.arrow1{
+    position: relative;
+}
+
+.arrow1 icon::before {
+    border: 1px solid black;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100px;
+    transform: translateX(-100px);
+}
+
+.arrow1 icon::after {
+    border: 1px solid black;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100px;
+    top: -50px;
+    right: -50px;
+    transform: rotate(-90deg);
+}
+
+
+.arrow1::after{
+    content: '';
+    position: absolute;
+    right: -28px;
+    bottom: 70px;
+    border: 1px solid black;
+    width: 200px;
+    transform: rotate(45deg);
+}
+
+
+
+/* 
+arrow{
+    position: absolute;
+    right: 0px;
+} */
+
+/* arrow.block{
+    display: block;
+    height: 167px;
+    width: 200px;
+} */
+
+
+
+
