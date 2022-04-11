@@ -13,11 +13,8 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <style>
-        element.style {
-            /* visibility: visible;
-            opacity: 1; */
-            transition: 2s;
-        }
+       
+
     </style>
 </head>
 <body>
@@ -35,22 +32,22 @@
                 Knox Lane is an investment firm focused on partnering with growth-oriented businesses in the services and consumer sectors.
             </p>
             <div class="animsection">
-                <div>
-                    <a href="#0" class="link arrow">
+
+                <div class="slidercontainer">
+                    <a href="#0" class="link" id="linkElement1">
                         <span>Learn More</span>
                     </a>
                 </div>
-                <div class="arrow1">
-                    <icon>
-
-                    </icon>
+                <!-- arrow -->
+                <div class="mainparent">
+                    <div class="parent diagonal" id="animatedElement">
+                        <div class="child1">
+                            
+                        </div>
+                    </div>
                 </div>
-                
             </div>
             
-            <!-- <arrow class="block reveal">
-                
-            </arrow> -->
         </div>
     </section>
 
@@ -59,9 +56,37 @@
     </section>
 
 
-    <script>
-        ScrollReveal().reveal('.arrow1',{ delay: 800 });
-        ScrollReveal().reveal('p',{ delay: 500 });
+    <script type="text/javascript">
+        window.addEventListener('scroll',reveal);
+
+        function reveal(){
+            let animatedElement = document.getElementById('animatedElement');
+
+
+            var windowheight = window.innerHeight;
+                var revealTop = animatedElement.getBoundingClientRect().top;
+                var revealPoint = 10;
+
+            if(revealTop < windowheight - revealPoint){
+                animatedElement.classList.add('reveal');
+            }else{
+                animatedElement.classList.remove('reveal');
+            }
+
+            // link - slider
+            let linkElement1 = document.getElementById("linkElement1");
+
+            let callback1 = () => {
+                linkElement1.classList.add('showItem');
+            }
+
+            let callback2 = () => {
+                linkElement1.classList.remove('showItem');
+            }
+
+            linkElement1.onmouseover = callback1;
+            linkElement1.onmouseleave = callback2;
+            }
     </script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
