@@ -249,7 +249,17 @@
     font-weight: 700;
     padding: 20px 0px;
     position: relative;
+    opacity: 0;
+    transform: translateX(100px);
 }
+
+.textItems h3.reveal{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all ease 3s;
+}
+
+
 
 
 .textItems .headingItem::before{
@@ -322,4 +332,28 @@
     position: sticky;
     top: 80px;
     width: 50%;
+}
+
+
+/*partner section */
+
+.partnerSection{
+    height: 200px;
+}
+
+.partnerSection .para{
+    display: block;
+    color: black;
+    font-weight: 600;
+}
+
+.partnerPara{
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.partnerPara.reveal{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all ease 1s;
 }

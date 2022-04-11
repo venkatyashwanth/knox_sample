@@ -1,12 +1,8 @@
 window.addEventListener('scroll', reveal);
-
 function reveal() {
     let animatedElement = document.getElementById('animatedElement');
     // text-animation
     let textAnim = document.getElementById('textAnimation');
-
-
-
     var windowheight = window.innerHeight;
     var revealTop = animatedElement.getBoundingClientRect().top;
     var revealPoint = 10;
@@ -104,5 +100,34 @@ function reveal3() {
         num2.classList.remove('reveal');
         num3.classList.remove('reveal');
         num2.textContent = 0;
+    }
+}
+
+
+window.addEventListener('scroll', reveal4);
+function reveal4() {
+    let animatedElementa = document.getElementById('animatedElement1');
+    // text-animation
+    var windowheight = window.innerHeight;
+    var revealTop = animatedElementa.getBoundingClientRect().top;
+    var revealPoint = 10;
+    if (revealTop < windowheight - revealPoint) {
+        animatedElementa.classList.add('reveal');
+    } else {
+        animatedElementa.classList.remove('reveal');
+    }
+}
+
+window.addEventListener('scroll', reveal5);
+function reveal5(){
+    let paragraphitem = document.getElementById('paragraphitem');
+    // text-animation
+    var windowheight = window.innerHeight;
+    var revealTop = paragraphitem.getBoundingClientRect().top;
+    var revealPoint = 10;
+    if (revealTop < windowheight - revealPoint) {
+        paragraphitem.classList.add('reveal');
+    } else {
+        paragraphitem.classList.remove('reveal');
     }
 }
