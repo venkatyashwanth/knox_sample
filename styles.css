@@ -167,14 +167,14 @@
     background: url("./media/icons_arrow_right-purple.svg");
     height: 20px;
     width: 25px;
-    z-index: -10;
+    /* z-index: -10; */
     transition: margin-left 0.2s;
     transition-delay: 0.2s;
 }
 
 .link.showItem::before{
     margin-left: 130px;
-    transition: all linear 0.2s;
+    transition: all ease 0.2s;
 }
 
 .link span{
@@ -240,4 +240,80 @@
 
 .journey h2{
     font-size: 56px;
+}
+
+.textItems h3{
+    width: 480px;
+    margin-left: auto;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 20px 0px;
+    position: relative;
+}
+
+
+.textItems .headingItem::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    border-top: 1px solid black;
+    width: 0%;
+}
+
+.textItems .headingItem.reveal::before{
+    width: 100%;
+    transition:  width ease 1s;
+}
+
+
+.textItems .headingItem::after{
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-top: 1px solid black;
+    width: 0%;
+}
+
+.textItems .headingItem.reveal::after{
+    width: 100%;
+    transition:  width ease 2s;
+}
+
+
+.stats{
+    width: 480px;
+    margin-left: auto;
+    margin-bottom: 30px;
+}
+
+.stats .numbers{
+    display: block;
+    font-size: 56px;
+    position: relative;
+    left: 20px;
+}
+
+.stats .numbers::after{
+    content: '';
+    position: absolute;
+    left: -20px;
+    transform: translateY(35%);
+    border: 1px solid black;
+    height: 60%;
+    width: 1px;
+}
+
+.stats .description{
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    position: relative;
+    left: 20px;
+}
+
+.journeyImg{
+    position: sticky;
+    top: 80px;
+    width: 50%;
 }

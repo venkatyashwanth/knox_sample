@@ -17,11 +17,11 @@
         
     </style>
 </head>
-<body>
+<body scroll="smooth">
     <!-- Starting with about section -->
-    <section style="height: 1000px" class="bg-dark container">
+    <section style="height: 1000px" class="bg-secondary container">
         <p class="text-light">
-            Slide Down
+            Need to add more code, please scroll down for about section.
         </p>
     </section>
     
@@ -53,53 +53,64 @@
 
         <div class="container journey">
             <h2>Our Journey So Far</h2>
+            <img src="./media/ourjourney.jpg" alt="journey" class="journeyImg">
+            
             <div class="row">
                 <div class="col-6">
-                    <img src="./media/ourjourney.jpg" alt="journey" class="img-fluid">
+                    <div>
+                        
+                    </div>
+                </div>
+                <div class="col-6 textItems">
+                    <h3 id="horizontalLines" class="headingItem">
+                        We’re motivated by a desire to connect and collaborate with those who share our values and are driven by a vision of the future in which good people seek out other good people, and achieve greatness together.
+                    </h3>
+                    <div class="stats">
+                        <p>
+                            In the Numbers
+                        </p>
+                        <div>
+                            <span class="numbers" id="num1">
+                                0
+                            </span>
+                            <span class="description">
+                                Companies supported by team members over the last 20 years
+                            </span>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <div>
+                            <span class="numbers" id="num2">
+                                0
+                            </span>
+                            <span class="description">
+                                Diverse representation on the team
+                            </span>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <div>
+                            <span class="numbers">
+                                $1 B
+                            </span>
+                            <span class="description">
+                                Of assets under management
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
+           
+            
         </div>
     </section>
 
-    <section style="height: 100px;">
+    <section style="height: 1000px;">
         
     </section>
 
+    <script src="./script.js"></script>
 
-    <script type="text/javascript">
-        window.addEventListener('scroll',reveal);
-
-        function reveal(){
-            let animatedElement = document.getElementById('animatedElement');
-            // text-animation
-            let textAnim = document.getElementById('textAnimation');
-
-            var windowheight = window.innerHeight;
-            var revealTop = animatedElement.getBoundingClientRect().top;
-            var revealPoint = 10;
-
-                if(revealTop < windowheight - revealPoint){
-                    animatedElement.classList.add('reveal');
-                    textAnim.classList.add('reveal');
-                }else{
-                    animatedElement.classList.remove('reveal');
-                    textAnim.classList.remove('reveal');
-                }
-            }
-
-
-            // link - slider
-            let linkElement1 = document.getElementById("linkElement1");
-
-            function callback1(){
-                linkElement1.classList.add('showItem');
-            }
-            function callback2(){
-                linkElement1.classList.remove('showItem');
-            }
-            linkElement1.onmouseover = callback1;
-            linkElement1.onmouseleave = callback2;
-    </script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
