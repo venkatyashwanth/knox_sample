@@ -300,8 +300,14 @@
     left: -20px;
     transform: translateY(35%);
     border: 1px solid black;
-    height: 60%;
+    height: 0%;
     width: 1px;
+}
+
+
+.stats .numbers.reveal::after{
+    height: 60%;
+    transition: all ease 1s;
 }
 
 .stats .description{

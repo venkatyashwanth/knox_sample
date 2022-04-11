@@ -59,6 +59,7 @@ function reveal2() {
     var revealTop = num1.getBoundingClientRect().top;
     var revealPoint = 10;
     if (revealTop < windowheight - revealPoint) {
+        num1.classList.add('reveal');
         val = parseInt(num1.textContent);
         let inter1 = setInterval(() => {
             if (val < 48) {
@@ -68,9 +69,10 @@ function reveal2() {
             if (val >= 48) {
                 clearInterval(inter1);
             }
-        }, 40);
+        }, 60);
 
     } else {
+        num1.classList.remove('reveal');
         num1.textContent = 0;
     }
 }
@@ -79,10 +81,14 @@ window.addEventListener('scroll', reveal3);
 function reveal3() {
     //our journey
     let num2 = document.getElementById('num2');
+    let num3 = document.getElementById('num3');
+    
     var windowheight = window.innerHeight;
     var revealTop = num2.getBoundingClientRect().top;
     var revealPoint = 10;
     if (revealTop < windowheight - revealPoint) {
+        num2.classList.add('reveal');
+        num3.classList.add('reveal');
         let val = parseInt(num2.textContent);
         let inter2 = setInterval(() => {
             if (val < 50) {
@@ -95,6 +101,8 @@ function reveal3() {
         }, 40);
 
     } else {
+        num2.classList.remove('reveal');
+        num3.classList.remove('reveal');
         num2.textContent = 0;
     }
 }
