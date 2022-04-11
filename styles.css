@@ -3,6 +3,8 @@
     margin-top: 20px;
 }
 
+
+
 #aboutsection p{
     max-width: 1020px;
     width: 100%;
@@ -216,3 +218,26 @@
 }
 /* Arrow Slider - end */
 
+.textContainer{
+    
+    position: relative;
+    transform: translateY(100px);  
+    opacity: 0;
+}
+
+.textContainer.reveal{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all ease 1s;
+}
+
+
+/* our journey section */
+.container.journey{
+    margin-top: 160px;
+    border-top: none;
+}
+
+.journey h2{
+    font-size: 56px;
+}
