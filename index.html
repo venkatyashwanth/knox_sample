@@ -13,8 +13,18 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <style>
-       
+        
+        .textContainer{
+            position: relative;
+            transform: translateY(100px);  
+            opacity: 0;
+        }
 
+        .textContainer.reveal{
+            transform: translateY(0px);
+            opacity: 1;
+            transition: all ease 1s;
+        }
     </style>
 </head>
 <body>
@@ -27,10 +37,13 @@
     
     <section id="aboutsection">
         <div class="container">
-            <h2>About</h2>
-            <p>
-                Knox Lane is an investment firm focused on partnering with growth-oriented businesses in the services and consumer sectors.
-            </p>
+            <div id="textAnimation" class="textContainer">
+                <h2>About</h2>
+                <p>
+                    Knox Lane is an investment firm focused on partnering with growth-oriented businesses in the services and consumer sectors.
+                </p>
+            </div>
+            
             <div class="animsection">
 
                 <div class="slidercontainer">
@@ -61,32 +74,34 @@
 
         function reveal(){
             let animatedElement = document.getElementById('animatedElement');
-
+            // text-animation
+            let textAnim = document.getElementById('textAnimation');
 
             var windowheight = window.innerHeight;
-                var revealTop = animatedElement.getBoundingClientRect().top;
-                var revealPoint = 10;
+            var revealTop = animatedElement.getBoundingClientRect().top;
+            var revealPoint = 10;
 
-            if(revealTop < windowheight - revealPoint){
-                animatedElement.classList.add('reveal');
-            }else{
-                animatedElement.classList.remove('reveal');
+                if(revealTop < windowheight - revealPoint){
+                    animatedElement.classList.add('reveal');
+                    textAnim.classList.add('reveal');
+                }else{
+                    animatedElement.classList.remove('reveal');
+                    textAnim.classList.remove('reveal');
+                }
             }
+
 
             // link - slider
             let linkElement1 = document.getElementById("linkElement1");
 
-            let callback1 = () => {
+            function callback1(){
                 linkElement1.classList.add('showItem');
             }
-
-            let callback2 = () => {
+            function callback2(){
                 linkElement1.classList.remove('showItem');
             }
-
             linkElement1.onmouseover = callback1;
             linkElement1.onmouseleave = callback2;
-            }
     </script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
