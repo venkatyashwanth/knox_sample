@@ -1,3 +1,227 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+/* header - start */
+header{
+    background-color: black;
+}
+
+
+header .nav .logo{
+    text-decoration: none;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+}
+.brandCont{
+    opacity: 0;
+    animation: feedDown 1s forwards;
+    animation-delay: .2s;
+}
+
+
+
+header .nav{
+    background-color: transparent;
+    padding: 10px;
+}
+
+header .container-fluid{
+    padding: 0px;
+}
+
+.nav-list{
+    list-style: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh; 
+    background-color: gray;
+    padding: 4.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1250;
+    transform: translateX(100%);
+    transition: transform 0.6s; 
+    transition-delay: 0.1s;
+}
+
+.menu-icon-inside{
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    right: 20px;
+}
+
+.menu-icon-inside::before{
+    content: '';
+    position: absolute;
+    top: 27px;
+    right: 10px;
+    background-color: red;
+    transform: rotate(0deg);
+    width: 30px;
+    height: 2px;
+}
+
+.open .menu-icon-inside::before{
+    transform: rotate(-45deg);
+    top: 30px;
+    transition: transform 1s; 
+}
+
+.menu-icon-inside::after{
+    content: '';
+    position: absolute;
+    top: 33px;
+    right: 10px;
+    background-color: red;
+    transform: rotate(0deg);
+    width: 30px;
+    height: 2px;
+}
+
+.open .menu-icon-inside::after{
+    transform: rotate(45deg);
+    top: 30px;
+    transition: transform 1s; 
+}
+
+.menu-sub-out{
+    position: relative;
+    cursor: pointer;
+}
+
+
+.menu-sub-out::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    background-color: red;
+    width: 30px;
+    height: 2px;
+    right: 20px;
+    
+}
+
+.open .menu-sub-out::before{
+    transform: rotate(-45deg);
+    top: 0px;
+    transition: transform 0.4s; 
+}
+
+.menu-sub-out::after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    background-color: red;
+    width: 30px;
+    height: 2px;
+    right: 20px;
+    
+}
+
+.open .menu-sub-out::after{
+    transform: rotate(45deg);
+    top: 0px;
+    transition: transform 0.4s; 
+}
+
+
+.menu-outside .nav-link{
+    margin-right: 40px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.menu-outside{
+    opacity: 0;
+    animation: feedDown 0.8s forwards;
+    animation-delay: .2s;
+}
+
+.open .nav-list{
+    transform: translateX(0);
+}
+
+.nav-list .nav-link{
+    color: white;
+    font-size: 40px;
+}
+/* header - end */
+
+/* Hero section - start */
+.herosection{
+    height: 80vh;
+    width: 100vw;
+    background: url('./media/herobackground.jpg') center no-repeat;
+    background-size: cover;
+}
+
+
+.headingCont h1{
+    font-family: sans-serif;
+    font-size: 64px;
+    width: 90%;
+    color: white;
+}
+
+.herosection .headingCont{
+    opacity: 0;
+    animation: feedUp 0.8s forwards;
+}
+
+
+/* Animations */
+@keyframes feedDown{
+    0%{
+        transform: translateY(-4rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes feedUp{
+    0%{
+        transform: translateY(10rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Hero section - end */
+
+
+/* side-menu */
+.side-menu{
+    height: 100vh;
+    width: 80%;
+    position: absolute;
+    /* top: 0; */
+    right: 0px;
+    background-color: gray;
+    /* z-index: 10; */
+}
+
+
+
+
+/* side-menu */
+
 .container{
     border-top: 1px solid rgb(198, 198, 198);
     margin-top: 20px;
@@ -357,3 +581,4 @@
     transform: translateY(0px);
     transition: all ease 1s;
 }
+

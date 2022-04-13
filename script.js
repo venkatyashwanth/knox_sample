@@ -131,3 +131,19 @@ function reveal5(){
         paragraphitem.classList.remove('reveal');
     }
 }
+
+
+// Header menu toggler
+let openMenuIcon = document.getElementById('openMenuIcon');
+let closeMenuIcon = document.getElementById("closeMenuIcon");
+
+
+openMenuIcon.addEventListener('click',function(){
+    let navigationMenu = document.getElementById("navigationMenu");
+    navigationMenu.classList.toggle('open');
+})
+
+closeMenuIcon.addEventListener('click',function(){
+    let navigationMenu = document.getElementById("navigationMenu");
+    navigationMenu.classList.toggle('open');
+})
