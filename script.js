@@ -147,3 +147,49 @@ closeMenuIcon.addEventListener('click',function(){
     let navigationMenu = document.getElementById("navigationMenu");
     navigationMenu.classList.toggle('open');
 })
+
+
+let sc1 = document.getElementById('sc1');
+let sc2 = document.getElementById('sc2');
+let sc3 = document.getElementById('sc3');
+
+
+window.addEventListener('scroll', reveal6);
+window.addEventListener('scroll', reveal7);
+window.addEventListener('scroll', reveal8);
+
+function reveal6(){
+    var windowheight = window.innerHeight;
+    var revealTop = sc1.getBoundingClientRect().top;
+    var revealPoint = 10;
+    if (revealTop < windowheight - revealPoint) {
+        sc1.classList.add('reveal');
+    } else {
+        sc1.classList.remove('reveal');
+    }
+}
+
+
+function reveal7(){
+    var windowheight = window.innerHeight;
+    var revealTop = sc2.getBoundingClientRect().top;
+    var revealPoint = 10;
+    if (revealTop < windowheight - revealPoint) {
+        sc2.classList.add('reveal');
+        sc1.classList.remove('reveal');
+    } else {
+        sc2.classList.remove('reveal');
+    }
+}
+function reveal8(){
+    var windowheight = window.innerHeight;
+    var revealTop = sc3.getBoundingClientRect().top;
+    var revealPoint = 10;
+    if (revealTop < windowheight - revealPoint) {
+        sc3.classList.add('reveal');
+        sc2.classList.remove('reveal');
+        sc1.classList.remove('reveal');
+    } else {
+        sc3.classList.remove('reveal');
+    }
+}

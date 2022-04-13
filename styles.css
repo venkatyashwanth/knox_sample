@@ -582,3 +582,56 @@ header .container-fluid{
     transition: all ease 1s;
 }
 
+
+/* scrollsection */
+
+
+
+
+.scrollcontainer{
+    opacity: 0;
+    /* transition: all ease 0.2s; */
+}
+
+
+.scrollcontainer.reveal{
+    opacity: 1;
+    animation: feedDownScroll 0.8s forwards;
+}
+
+@keyframes feedDownScroll{
+    0%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+.scrollsection{
+    margin-top: 100px;
+}
+.scrollsection p{
+    width: 60%;
+}
+
+.imageScroll{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.imageScroll img{
+    transform: scale(1);
+    transition: transform ease 0.8s;
+}
+
+
+.imageScroll:hover img{
+    transform: scale(1.2);
+    transition: transform ease 0.8s;
+    cursor: pointer;
+}
